@@ -20,6 +20,8 @@ I applied a 3x3 median filter to remove the speckle noise on ultrasound images. 
 
 #### Logistic regression
 
+#### Random forest
+
 #### Fully connected neural networks
 
 #### Convolutional neural networks
