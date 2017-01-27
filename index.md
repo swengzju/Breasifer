@@ -7,6 +7,7 @@ This project is a consulting project provided by iSono Health. The mission of iS
 ### Data and image preprocessing
 
 There are 2,091 labeled 2D ultrasound images in total.
+
 - Benign cases: 815
 - Malignant cases: 1098
 - Unusual cases: 178
