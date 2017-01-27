@@ -1,19 +1,27 @@
-## Background
+### Background
 
-You can use the [editor on GitHub](https://github.com/swengzju/myblog/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Breast cancer is the second leading cause of cancer related deaths in women. It has been reported that one in eight women will be diagnosed with invasive breast cancer in their lifetime.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This project is a consulting project provided by iSono Health. The mission of iSono Health is developing a low-cost, automated ultrasound imaging platform to facilitate monthly self-monitoring for women to help with early breast cancer detection.
 
-### Markdown
+### Data and image preprocessing
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+There are 2,091 labeled 2D ultrasound images in total.
+- Benign cases: 815
+- Malignant cases: 1098
+- Unusual cases: 178
 
 ```markdown
 Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+### Algorithms
+
+# Logistic regression
+
+# Fully connected neural networks
+
+# Convolutional neural networks
+
 
 - Bulleted
 - List
@@ -28,10 +36,6 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+### Discussion
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/swengzju/myblog/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Conclusion
