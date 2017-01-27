@@ -14,6 +14,8 @@ There are 2,091 labeled 2D ultrasound images in total.
 
 ## Image preprocessing
 
+I applied a 3x3 median filter to remove the speckle noise on ultrasound images. I also resized all images to 300 x 300 by zero padding, for default convolutional neural networks training.
+
 ## Algorithms
 
 #### Logistic regression
