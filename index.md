@@ -23,7 +23,7 @@ The raw dataset (courtesey of iSono Health) contains 2,091 labeled 2-D breast ul
 
 Over 99% of the images have the size of 300 x 225 pixels, each pixel has a value ranging from 0 to 255. There are 12 subtypes in the benign cases and 13 subtypes in the malignant cases. The images were obtained from different sources, so they have various field of views, resolutions, scales, etc. Below shows some benign and malignant breast lesions with different subtypes.
 
-![alt text](https://farm1.staticflickr.com/290/32518871582_3dff54480f_b.jpg)
+![alt text](https://farm1.staticflickr.com/290/32292792970_224a161014_b.jpg)
 
 In order to make it a binary classification problem (benign or malignant), I ignored all the subtypes as well as the unusual cases. I randomly selected 1600 images to build my model, half of them were benign and half of them were malignant. 
 
