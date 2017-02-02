@@ -1,3 +1,5 @@
+# Classifying Benign and Malignant Lesions in Breast Ultrasound Using Deep Learning
+
 ## Background
 
 Breast cancer is the second leading cause of cancer related deaths in women. It has been reported that one in eight women in the U.S. will be diagnosed with invasive breast cancer in their lifetime. In 2017, about 255,180 new cases of invasive breast cancer are expected to be diagnosed and 40,610 women in the U.S. are expected to die from breast cancer.
