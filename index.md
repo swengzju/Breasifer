@@ -29,14 +29,6 @@ In order to make a binary classification problem (benign or malignant), I ignore
 
 ## Algorithms
 
-Flow chart
-
-#### Principle component analysis
-
-#### Logistic regression
-
-#### Random forest
-
 #### Fully connected neural networks
 
 #### Convolutional neural networks
