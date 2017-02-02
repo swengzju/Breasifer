@@ -12,7 +12,7 @@ Traditionally, once-a-year screening is recommended to check a woman’s breasts
 
 ## Data overview 
 
-The raw dataset (courtesey of iSono Health) contains 2,091 labeled 2-D ultrasound images:
+The raw dataset (courtesey of iSono Health) contains 2,091 labeled 2-D breast ultrasound images:
 
 - Benign cases: 815
 - Malignant cases: 1098
