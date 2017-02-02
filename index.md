@@ -29,15 +29,17 @@ In order to make it a binary classification problem (benign or malignant), I ign
 
 ## Data preparation
 
-I applied a 3x3 median filter to remove the speckle noise on ultrasound images. I normalized the pixel values on each image so that they had zero mean. Based on the observatin that the most interesting part (lesion and its surroundings) of almost all the images is located around the center of the image, I cropped all the images so that their dimensions were reduced to 200 x 200 pixels.
+I applied a 3x3 median filter to remove the speckle noise on ultrasound images. I normalized the pixel values on each image so that they had zero mean. 
 
-It is worth mentioning that 2000 images as a whole is still a relative small dataset for such a complicated image classification problem. Also, the features that characterize breast lesions should be rotation invariant. Therefore, I applied an image augmentation method by perturbing the existing dataset. Specifically, I rotated each image a random small degree from -7° to 7° and I did it for fourteen times, so I eventually got 1600 x (14 + 1) = 24000 images. I then downsampled them 5x to 40 x 40 pixels, in order to keep the input size of the network manageable. The flow chart of data preparation is shown below.
+It is worth mentioning that 2000 images as a whole is still a relative small dataset for such a complicated image classification problem. Also, the features that characterize breast lesions should be rotation invariant. Therefore, I applied an image augmentation method by perturbing the existing dataset. Specifically, I rotated each image a random small degree from -7° to 7° and I did it for fourteen times, so I eventually got 1600 x (14 + 1) = 24000 images. 
 
+Based on the observatin that the most interesting part (lesion and its surroundings) of almost all the images is located around the center of the image, I cropped all the images so that their dimensions were reduced to 200 x 200 pixels. I then downsampled them 5x to 40 x 40 pixels, in order to keep the input size of the network manageable. The flow chart of data preparation is shown below.
 
+![alt text](https://farm1.staticflickr.com/426/32550917711_907ce0ac6c_b.jpg)
 
-Finally, 18000 of them were randomly selected for training, 3000 of them were for validation, and the other 3000 were for testing. Training, validation, and test set all have 50% benign and 50% malignant cases.
+Finally, 18000 of them were randomly selected for training, 3000 of them were for validation, and the other 3000 were for testing. Training, validation, and test set all consist of 50% benign and 50% malignant cases.
 
-
+![alt text](https://farm1.staticflickr.com/686/32631809276_9b69b5d9d9_b.jpg)
 
 ## Algorithms
 
