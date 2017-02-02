@@ -2,13 +2,13 @@
 
 Breast cancer is the second leading cause of cancer related deaths in women. It has been reported that one in eight women in the U.S. will be diagnosed with invasive breast cancer in their lifetime. In 2017, about 255,180 new cases of invasive breast cancer are expected to be diagnosed and 40,610 women in the U.S. are expected to die from breast cancer.
 
-![alt text](https://postimg.org/image/gndpluv6b/)
+![alt text](https://farm1.staticflickr.com/631/31859175883_f667ee7f64_m.jpg)
 
 Traditionally, once-a-year screening is recommended to check a woman’s breasts health before there are signs or symptoms of the disease, especially for those who are over 50 years old. The screening normally involves X-ray mammograms followed by ultrasound imaging. However, the diagnosis on breast ultrasound is a subjective procedure and highly dependent on the experience of the surgeons. 
 
 [iSono Health](http://www.isonohealth.com/) is a startup company committed to developing an affordable, automated ultrasound imaging platform to facilitate monthly self-monitoring for women to help with early breast cancer detection. The device is bundled with iSono app that can analyze the results and tag any changes in the back end in real time. During the time at Insight Health Data Fellow program, I was working with iSono Health focusing on building a deep learning model to differentiate benign and malignant breast lesions based on the ultrasound images.
 
-![alt text](https://postimg.org/image/tsxt5pefn/)
+![alt text](https://farm1.staticflickr.com/778/32518628362_5e8e668c23_b.jpg)
 
 ## Data overview 
 
@@ -22,6 +22,8 @@ The raw dataset (courtesey of iSono Health) contains 2,091 labeled 2-D breast ul
 - Subtypes in unusual: 3
 
 Over 99% of the images have the size of 300 x 225 pixels, each pixel has a value ranging from 0 to 255.
+
+![alt text](https://farm1.staticflickr.com/593/31859176043_998a0ab8ce_b.jpg)
 
 ## Data preparation
 
