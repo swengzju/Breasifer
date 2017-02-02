@@ -12,7 +12,7 @@ Traditionally, once-a-year screening is recommended to check a woman’s breasts
 
 ## Data overview 
 
-The raw dataset (courtesey of iSono Health) contains 2,091 labeled 2-D breast ultrasound images:
+The raw dataset (courtesey of iSono Health) contains 2,091 labeled 2-D breast ultrasound images in JPEG format:
 
 - Benign cases: 815
 - Malignant cases: 1098
@@ -25,13 +25,18 @@ Over 99% of the images have the size of 300 x 225 pixels, each pixel has a value
 
 ![alt text](https://farm1.staticflickr.com/290/32292792970_224a161014_b.jpg)
 
-In order to make it a binary classification problem (benign or malignant), I ignored all the subtypes as well as the unusual cases. I randomly selected 1600 images to build my model, half of them were benign and half of them were malignant. 
+In order to make it a binary classification problem (benign or malignant), I ignored all the subtypes as well as the unusual cases. I randomly selected 1600 images to build my model, half of them were benign and half of them were malignant, therefore it was a balanced dataset. 
 
 ## Data preparation
 
-I applied a 3x3 median filter to remove the speckle noise on ultrasound images. I normalized the pixel values on each image so that they had zero mean. Based on the observatin that the most interesting part (lesion and its surroundings) of almost all the images is located around the center of the image, I cropped all images so that the dimension was reduced to 200 x 200 pixels.
+I applied a 3x3 median filter to remove the speckle noise on ultrasound images. I normalized the pixel values on each image so that they had zero mean. Based on the observatin that the most interesting part (lesion and its surroundings) of almost all the images is located around the center of the image, I cropped all the images so that their dimensions were reduced to 200 x 200 pixels.
 
-It is worth mention that 2000 images is still a relative small dataset for such a complicated image classification task. Among them, 1200 of them were randomly selected for training, 200 of them were for validation, and the other 200 were for testing.
+It is worth mentioning that 2000 images as a whole is still a relative small dataset for such a complicated image classification problem. Also, the features that characterize breast lesions should be rotation invariant. Therefore, I applied an image augmentation method by perturbing the existing dataset. Specifically, I rotated each image a random small degree from -7° to 7° and I did it for fourteen times, so I eventually got 1600 x (14 + 1) = 24000 images. I then downsampled them 5x to 40 x 40 pixels, in order to keep the input size of the network manageable. The flow chart of data preparation is shown below.
+
+
+
+Finally, 18000 of them were randomly selected for training, 3000 of them were for validation, and the other 3000 were for testing. Training, validation, and test set all have 50% benign and 50% malignant cases.
+
 
 
 ## Algorithms
