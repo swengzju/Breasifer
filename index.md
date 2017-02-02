@@ -45,11 +45,19 @@ Finally, 18000 of them were randomly selected for training, 3000 of them were fo
 
 To achieve correct classification, the conventional method is often composed of three main steps: feature extraction, feature selection, and classification. Tese three steps need to be well-addressed separately and then integrated together. Extraction of discriminative features could potentially ease the latter steps of feature selection and classification. Nevertheless, the engineering of effective features is problem-oriented and highly depends on the quality of each intermediate result in the image processing, which often needs many passes of trial-and-error design and case-by-case user interventions [1].
 
-The recent advances of deep learning technology can potentially change the design paradigm. Deep learning can directly uncover features from the training data without the explicit elaboration on feature extraction and selection.  e neuron-cra ed features may compensate and even surpass the discriminative power of the conventional feature extraction methods. Second, feature interaction and hierarchy can be exploited jointly within the intrinsic deep architecture of a neural network.
+The recent advances of deep learning technology can potentially change the design paradigm of image classification. Deep learning can directly uncover features from the training data without the explicit elaboration on feature extraction and selection. With the help of back propagation, the internal structures of neural networks get updated automatically based on the error information obtained from each iteration.
+
+In this project, I investigated and compared the performances of two different deep learning architectures, namely fully connected neural network and convolutional neural network.
 
 #### Fully connected neural network
 
-In fully connected neural network, each neuron is connected to all the neurons in the previous layer, and each connection has its own weight. However, the information of the weights are not shared by neurons.
+In fully connected neural network, each neuron is connected to all the neurons in the previous layer, and each connection has its own weight. However, the information of the weights are not shared by neurons. Before implementing fully connected neural network, there was an extra step of converting each 2D image into a 1D array with a size of 1600. After that, the input layer became a 18000 x 1600 matrix.
+
+![alt text](https://farm1.staticflickr.com/319/31831201844_e63578572f_b.jpg)
+
+The constructed fully connected neural network has one input layer, three hidden layers that have 512, 256, 128 nodes respectively, and one output layer that has two outputs. The diagram is shown below.
+
+![alt text](https://farm1.staticflickr.com/719/32521161552_0d397712a0_b.jpg)
 
 #### Convolutional neural network
 
@@ -60,6 +68,8 @@ By feeding the output of one convolutional layer to another, higher-order featur
 ## Discussion
 
 ## Final remarks
+
+I want to thank all the people at Insight and the fellow fellows for giving me tremendous help in this project. I also want to thank iSono Health and CTO Dr. Shadi Saberi for giving me the opportunity to work on this interesting and challenging problem. I really learned a lot during my journey at Insight.
 
 Reference: 
 [1] Cheng, Jie-Zhi, et al. "Computer-Aided diagnosis with deep learning architecture: applications to breast lesions in us images and pulmonary nodules in CT scans." Scientific reports 6 (2016).
