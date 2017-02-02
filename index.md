@@ -41,4 +41,4 @@ Flow chart
 
 ## Discussion
 
-## Conclusion
+## Final remarks
