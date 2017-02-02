@@ -29,9 +29,9 @@ In order to make it a binary classification problem (benign or malignant), I ign
 
 ## Data preparation
 
-I applied a 3x3 median filter to remove the speckle noise on ultrasound images. I normalized the pixel values on each image so that they had zero mean. 
+I applied a 3x3 median filter to remove the speckle noise on ultrasound images. I also normalized the pixel values on each image so that they had zero mean. 
 
-It is worth mentioning that 2000 images as a whole is still a relative small dataset for such a complicated image classification problem. Also, the features that characterize breast lesions should be rotation invariant. Therefore, I applied an image augmentation method by perturbing the existing dataset. Specifically, I rotated each image a random small degree from -7° to 7° and I did it for fourteen times, so I eventually got 1600 x (14 + 1) = 24000 images. 
+It is worth mentioning that 1600 images as a whole is still a relative small dataset for such a complicated image classification problem. Also, the features that characterize breast lesions should be rotation invariant. Therefore, I applied an image augmentation method by perturbing the existing dataset. Specifically, I rotated each image a random small degree from -7° to 7° and I did it for fourteen times, so I eventually got 1600 x (14 + 1) = 24000 images. 
 
 Based on the observatin that the most interesting part (lesion and its surroundings) of almost all the images is located around the center of the image, I cropped all the images so that their dimensions were reduced to 200 x 200 pixels. I then downsampled them 5x to 40 x 40 pixels, in order to keep the input size of the network manageable. The flow chart of data preparation is shown below.
 
@@ -43,10 +43,23 @@ Finally, 18000 of them were randomly selected for training, 3000 of them were fo
 
 ## Algorithms
 
-#### Fully connected neural networks
+To achieve correct classification, the conventional method is often composed of three main steps: feature extraction, feature selection, and classification. Tese three steps need to be well-addressed separately and then integrated together. Extraction of discriminative features could potentially ease the latter steps of feature selection and classification. Nevertheless, the engineering of effective features is problem-oriented and highly depends on the quality of each intermediate result in the image processing, which often needs many passes of trial-and-error design and case-by-case user interventions [1].
 
-#### Convolutional neural networks
+The recent advances of deep learning technology can potentially change the design paradigm. Deep learning can directly uncover features from the training data without the explicit elaboration on feature extraction and selection.  e neuron-cra ed features may compensate and even surpass the discriminative power of the conventional feature extraction methods. Second, feature interaction and hierarchy can be exploited jointly within the intrinsic deep architecture of a neural network.
+
+#### Fully connected neural network
+
+In fully connected neural network, each neuron is connected to all the neurons in the previous layer, and each connection has its own weight. However, the information of the weights are not shared by neurons.
+
+#### Convolutional neural network
+
+In convolutional neural network, each neuron is only connected with a few local neurons in the previous layer, and the weight is shared for every neuron in that layer. Convolutional neural network is effective for image classification problems because the convolution operation produces information on spacially correlated features of the image. For example, convolution may result in edges becoming more prominent.
+
+By feeding the output of one convolutional layer to another, higher-order features can be extracted. After convolution, these features can be more readily learned by a fully connected neural network. 
 
 ## Discussion
 
 ## Final remarks
+
+Reference: 
+[1] Cheng, Jie-Zhi, et al. "Computer-Aided diagnosis with deep learning architecture: applications to breast lesions in us images and pulmonary nodules in CT scans." Scientific reports 6 (2016).
