@@ -6,7 +6,7 @@ Breast cancer is the second leading cause of cancer related deaths in women. It 
 
 Traditionally, once-a-year screening is recommended to check a woman’s breasts health before there are signs or symptoms of the disease, especially for those who are over 50 years old. The screening normally involves X-ray mammograms followed by ultrasound imaging. However, the diagnosis based on breast ultrasound is a subjective procedure and highly dependent on the experience of the surgeons. 
 
-This project is a consulting project provided by iSono Health. The mission of iSono Health is developing a low-cost, automated ultrasound imaging platform to facilitate monthly self-monitoring for women to help with early breast cancer detection.
+This project is a consulting project provided by [iSono Health](http://www.isonohealth.com/). The mission of iSono Health is developing a low-cost, automated ultrasound imaging platform to facilitate monthly self-monitoring for women to help with early breast cancer detection.
 
 ![alt text](https://github.com/swengzju/myblog/blob/master/Snip20170202_1.png)
 
