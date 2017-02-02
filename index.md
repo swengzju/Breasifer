@@ -21,17 +21,17 @@ The raw dataset (courtesey of iSono Health) contains 2,091 labeled 2-D breast ul
 - Subtypes in malignant: 13
 - Subtypes in unusual: 3
 
-Over 99% of the images have the size of 300 x 225 pixels, each pixel has a value ranging from 0 to 255. There are 12 subtypes in the benign cases and 13 subtypes in the malignant cases. The images were obtained from different sources, so they have various field of views, resolutions, scales, etc. Below is an example of some benign and malignant images with different subtypes.
+Over 99% of the images have the size of 300 x 225 pixels, each pixel has a value ranging from 0 to 255. There are 12 subtypes in the benign cases and 13 subtypes in the malignant cases. The images were obtained from different sources, so they have various field of views, resolutions, scales, etc. Below shows some benign and malignant breast lesions with different subtypes.
 
 ![alt text](https://farm1.staticflickr.com/290/32518871582_3dff54480f_b.jpg)
 
-In order to make a binary classification problem (benign or malignant), I ignored all the subtypes as well as the unusual cases. I randomly selected 1600 images to build my model, half of them were benign and half of them were malignant. 
+In order to make it a binary classification problem (benign or malignant), I ignored all the subtypes as well as the unusual cases. I randomly selected 1600 images to build my model, half of them were benign and half of them were malignant. 
 
 ## Data preparation
 
-I applied a 3x3 median filter to remove the speckle noise on ultrasound images. I resized all images to 300 x 300 by zero padding, for the purpose of easy convolutional neural networks modeling. I also normalized the pixel values so that they had zero mean.
+I applied a 3x3 median filter to remove the speckle noise on ultrasound images. I normalized the pixel values on each image so that they had zero mean. Based on the observatin that the most interesting part (lesion and its surroundings) of almost all the images is located around the center of the image, I cropped all images so that the dimension was reduced to 200 x 200 pixels.
 
-Among all the selected images, 1200 of them were randomly selected for training, 200 of them were for validation, and the other 200 were for testing.
+It is worth mention that 2000 images is still a relative small dataset for such a complicated image classification task. Among them, 1200 of them were randomly selected for training, 200 of them were for validation, and the other 200 were for testing.
 
 
 ## Algorithms
