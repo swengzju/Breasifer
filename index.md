@@ -6,7 +6,7 @@ Traditionally, once-a-year screening is recommended to check a woman’s breasts
 
 This project is a consulting project provided by iSono Health. The mission of iSono Health is developing a low-cost, automated ultrasound imaging platform to facilitate monthly self-monitoring for women to help with early breast cancer detection.
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/swengzju/myblog/blob/master/Snip20170202_1.png)
 
 ## Data overview 
 
