@@ -53,11 +53,11 @@ In this project, I investigated and compared the performances of two different d
 
 In fully connected neural network, each neuron is connected to all the neurons in the previous layer, and each connection has its own weight. However, the information of the weights are not shared by neurons. Before implementing fully connected neural network, there was an extra step of converting each 2D image into a 1D array with a size of 1600. After that, the input layer became a 18000 x 1600 matrix.
 
-![alt text](https://farm1.staticflickr.com/316/32524396912_201bc8b86a_b.jpg)
+![alt text](https://farm1.staticflickr.com/319/31831201844_e63578572f_b.jpg)
 
 The constructed fully connected neural network has one input layer, three hidden layers that have 512, 256, 128 nodes respectively, and one output layer that has two outputs. The batch size is 128. The detailed diagram is shown below.
 
-![alt text](https://farm1.staticflickr.com/640/32677125585_0705d01f49_b.jpg)
+![alt text](https://farm1.staticflickr.com/719/32521161552_0d397712a0_b.jpg)
 
 #### Convolutional neural network
 
@@ -70,10 +70,10 @@ The constructed convolutional neural network has two convolutional layers, each 
 ## Model performance
 
 
-![alt text](https://farm1.staticflickr.com/425/32677075345_5f744b9988_m.jpg)
+![alt text](https://farm1.staticflickr.com/316/32524396912_201bc8b86a_b.jpg)
 
 
-![alt text](https://farm1.staticflickr.com/593/32677075285_683eab8928_m.jpg)
+![alt text](https://farm1.staticflickr.com/640/32677125585_0705d01f49_b.jpg)
 
 ## Final remarks
 
