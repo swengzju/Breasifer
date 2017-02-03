@@ -55,7 +55,7 @@ In fully connected neural network, each neuron is connected to all the neurons i
 
 ![alt text](https://farm1.staticflickr.com/319/31831201844_e63578572f_b.jpg)
 
-The constructed fully connected neural network has one input layer, three hidden layers that have 512, 256, 128 nodes respectively, and one output layer that has two outputs. The diagram is shown below.
+The constructed fully connected neural network has one input layer, three hidden layers that have 512, 256, 128 nodes respectively, and one output layer that has two outputs. The batch size is 128. The detailed diagram is shown below.
 
 ![alt text](https://farm1.staticflickr.com/719/32521161552_0d397712a0_b.jpg)
 
@@ -63,7 +63,9 @@ The constructed fully connected neural network has one input layer, three hidden
 
 In convolutional neural network, each neuron is only connected with a few local neurons in the previous layer, and the weight is shared for every neuron in that layer. Convolutional neural network is effective for image classification problems because the convolution operation produces information on spacially correlated features of the image. For example, convolution may result in edges becoming more prominent.
 
-By feeding the output of one convolutional layer to another, higher-order features can be extracted. After convolution, these features can be more readily learned by a fully connected neural network. 
+The constructed convolutional neural network has two convolutional layers, each of them has 64 5x5 filters. By feeding the output of one convolutional layer to another, higher-order features can be extracted. After convolution, these features can be more readily learned by a fully connected neural network. Following the convolutional layers, there are three fully connected layers with 512, 256, 128 nodes respectively. The batch size is 512. The detailed diagram is shown below.
+
+![alt text](https://farm1.staticflickr.com/335/32633875536_fc28e75933_b.jpg)
 
 ## Discussion
 
