@@ -70,10 +70,9 @@ The constructed convolutional neural network has two convolutional layers, each 
 ## Model performance
 
 
-![alt text](https://farm1.staticflickr.com/358/32524527012_fc551535d4_m.jpg)
+![alt text](https://farm1.staticflickr.com/419/32636736206_530ea9f1c9_b.jpg)
 
 
-![alt text](https://farm1.staticflickr.com/575/32677240795_f789e25d29_m.jpg)
 
 ## Final remarks
 
