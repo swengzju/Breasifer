@@ -12,7 +12,7 @@ Traditionally, once-a-year screening is recommended to check a woman’s breasts
 
 ## Data overview 
 
-The raw dataset (courtesey of iSono Health) contains 2,091 labeled 2-D breast ultrasound images in JPEG format:
+The raw dataset (courtesy of iSono Health) contains 2,091 labeled 2-D breast ultrasound images in JPEG format:
 
 - Benign cases: 815
 - Malignant cases: 1098
@@ -37,7 +37,7 @@ Based on the observatin that the most interesting part (lesion and its surroundi
 
 ![alt text](https://farm1.staticflickr.com/460/31831625064_552f5abfd0_b.jpg)
 
-Finally, 18000 of them were randomly selected for training, 3000 of them were for validation, and the other 3000 were for testing. Training, validation, and test set all consist of 50% benign and 50% malignant cases.
+Finally, 18000 of them were randomly selected for training, 3000 of them were for validation, and the other 3000 were for testing. Training, validation, and test set all consisted of 50% benign and 50% malignant cases.
 
 ![alt text](https://farm1.staticflickr.com/686/32631809276_9b69b5d9d9_b.jpg)
 
@@ -51,7 +51,7 @@ In this project, I investigated and compared the performances of two different d
 
 #### Fully connected neural network
 
-In fully connected neural network, each neuron is connected to all the neurons in the previous layer, and each connection has its own weight. However, the information of the weights are not shared by neurons. Before implementing fully connected neural network, there was an extra step of converting each 2D image into a 1D array with a size of 1600. After that, the input layer became a 18000 x 1600 matrix.
+In fully connected neural network, each neuron is connected to all the neurons in the previous layer, and each connection has its own weight. However, the information of the weights are not shared by the neurons. Before implementing fully connected neural network, there was an extra step of converting each 2D image into a 1D array with a size of 1600. After that, the input layer became a 18000 x 1600 matrix.
 
 ![alt text](https://farm1.staticflickr.com/319/31831201844_e63578572f_b.jpg)
 
@@ -69,12 +69,12 @@ The constructed convolutional neural network has two convolutional layers, each 
 
 ## Model evaluation
 
-After running both models five times, the average prediction accuracy on the hold-out test dataset is:
+After running both models five times, the average prediction accuracy on the hold-out test dataset was:
 
 - Fully connected neural network: 0.67
 - Convolutional neural network: 0.71
 
-The convolutional neural network out outperformed the fully connected neural network by four percent. The advantages of using convolutional neural network can also be observed from the following figures. As the number of training iteration increased, the validation accuracy of convolutional neural network quickly and smoothly ramped up to 0.9 after 2000 iterations, while the fully connected neural network did not reach 0.9 until around 4500 iterations. On the other hand, starting from 1000 iterations, the loss value of the convolutional neural network was always lower than the fully connected neural network, which indicated that the gradient descent function inside the convolutional neural network had a better performance in converging to the local minimum point.
+The convolutional neural network out outperformed the fully connected neural network by four percent. The advantages of using convolutional neural network can also be observed from the following figures. As the number of training iteration increased, the validation accuracy of the convolutional neural network quickly and smoothly ramped up to 0.9 after 2000 iterations, while the fully connected neural network did not reach 0.9 until around 4500 iterations. On the other hand, starting from 1000 iterations, the loss value of the convolutional neural network was always lower than the fully connected neural network, which indicated that the gradient descent function inside the convolutional neural network had a better performance in converging to the local minimum point.
 
 ![alt text](https://farm1.staticflickr.com/419/32636736206_530ea9f1c9_b.jpg)
 
