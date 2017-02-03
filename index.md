@@ -47,7 +47,7 @@ To achieve correct classification, the conventional method is often composed of 
 
 The recent advances of deep learning technology can potentially change the design paradigm of image classification. Deep learning can directly uncover features from the training data without the explicit elaboration on feature extraction and selection. With the help of back propagation, the internal structures of neural networks get updated automatically based on the error information obtained from each iteration.
 
-In this project, I investigated and compared the performances of two different deep learning architectures, namely fully connected neural network and convolutional neural network.
+In this project, I investigated and compared the performances of two different deep learning architectures, namely fully connected neural network and convolutional neural network. Both models were implemented using python and TensorFlow on a Nvidia Tesla K80 GPU hosted by Amazon Web Services (AWS) EC2 p2.xlarge instance.
 
 #### Fully connected neural network
 
@@ -67,16 +67,25 @@ The constructed convolutional neural network has two convolutional layers, each 
 
 ![alt text](https://farm1.staticflickr.com/335/32633875536_fc28e75933_b.jpg)
 
-## Model performance
+## Model evaluation
 
+After running both models five times, the average prediction accuracy on the hold-out test dataset is:
+
+- Fully connected neural network: 0.67
+- Convolutional neural network: 0.71
+
+The convolutional neural network out outperformed the fully connected neural network by four percent. The advantages of using convolutional neural network can also be observed from the following figures. As the number of training iteration increased, the validation accuracy of convolutional neural network quickly and smoothly ramped up to 0.9 after 2000 iterations, while the fully connected neural network did not reach 0.9 until around 4500 iterations. On the other hand, starting from 1000 iterations, the loss value of the convolutional neural network was always lower than the fully connected neural network, which indicated that the gradient descent function inside the convolutional neural network had a better performance in converging to the local minimum point.
 
 ![alt text](https://farm1.staticflickr.com/419/32636736206_530ea9f1c9_b.jpg)
 
-
+To speed up the training procedure, stochastic gradient descent (SGD) and rectified linear unit (ReLu) were applied in both models. Also, learning rate decay was adopted to increase the performances. Dropout was used to prevent overfitting.
 
 ## Final remarks
 
-I want to thank all the people at Insight and the fellow fellows for giving me tremendous help in this project. I also want to thank iSono Health and CTO Dr. Shadi Saberi for giving me the opportunity to work on this interesting and challenging problem. I really learned a lot during my journey at Insight.
+The convolutional neural network has many hyperparameters that can be tuned, including but not limited to: number of convolutional layers, number of fully connected layers, number of filters, size of filters, number of hidden nodes, batch size, learning rate, max pooling size, dropout ratio, etc. Therefore, the performance of the model could be potentially further improved by fine tuning. 
+
+Lastly, I want to thank all the people at Insight and the fellow fellows for giving me tremendous help in this project. I also want to thank iSono Health and CTO Dr. Shadi Saberi for giving me the opportunity to work on this interesting and challenging problem. I really learned a lot during my journey at Insight.
+
 
 Reference: 
 [1] Cheng, Jie-Zhi, et al. "Computer-Aided diagnosis with deep learning architecture: applications to breast lesions in us images and pulmonary nodules in CT scans." Scientific reports 6 (2016).
