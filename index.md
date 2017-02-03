@@ -6,7 +6,7 @@ Breast cancer is the second leading cause of cancer related deaths in women. It 
 
 Traditionally, once-a-year screening is recommended to check a woman’s breasts health before there are signs or symptoms of the disease, especially for those who are over 50 years old. The screening normally involves X-ray mammograms followed by ultrasound imaging. However, the diagnosis on breast ultrasound is a subjective procedure and highly dependent on the experience of the surgeons. 
 
-[iSono Health](http://www.isonohealth.com/) is a startup company committed to developing an affordable, automated ultrasound imaging platform to facilitate monthly self-monitoring for women to help with early breast cancer detection. The device is bundled with iSono app that can analyze the results and tag any changes in the back end in real time. During the time at Insight Health Data Fellow program, I was working with iSono Health focusing on building a deep learning model to differentiate benign and malignant breast lesions based on the ultrasound images.
+[iSono Health](http://www.isonohealth.com/) is a startup company committed to developing an affordable, automated ultrasound imaging platform to facilitate monthly self-monitoring for women to help with early breast cancer detection. The device is bundled with iSono app that can analyze the results and tag any changes in the back end in real time (see the picture below). During the time at Insight Health Data Fellow program, I was working with iSono Health focusing on building a deep learning model to differentiate benign and malignant breast lesions based on the ultrasound images.
 
 ![alt text](https://farm1.staticflickr.com/778/32518628362_5e8e668c23_b.jpg)
 
@@ -33,11 +33,11 @@ I applied a 3x3 median filter to remove the speckle noise on ultrasound images. 
 
 It is worth mentioning that 1600 images as a whole is still a relative small dataset for such a complicated image classification problem. Also, the features that characterize breast lesions should be rotation invariant. Therefore, I applied an image augmentation method by perturbing the existing dataset. Specifically, I rotated each image a random small degree from -7° to 7° and I did it for fourteen times, so I eventually got 1600 x (14 + 1) = 24000 images. 
 
-Based on the observatin that the most interesting part (lesion and its surroundings) of almost all the images is located around the center of the image, I cropped all the images so that their dimensions were reduced to 200 x 200 pixels. I then downsampled them 5x to 40 x 40 pixels, in order to keep the input size of the network manageable. The flow chart of data preparation is shown below.
+Based on the observation that the most interesting part (lesion and its surroundings) of almost all the images is located around the center of the image, I cropped all the images so that their dimensions were reduced to 200 x 200 pixels. I then downsampled them 5x to 40 x 40 pixels, in order to keep the input size of the network manageable. The flow chart of data preparation is shown below.
 
 ![alt text](https://farm1.staticflickr.com/460/31831625064_552f5abfd0_b.jpg)
 
-Finally, 18000 of them were randomly selected for training, 3000 of them were for validation, and the other 3000 were for testing. Training, validation, and test set all consisted of 50% benign and 50% malignant cases.
+Finally, 18000 of them were randomly selected for training, 3000 of them were for validation, and the other 3000 were for testing. Training, validation, and test set all consisted of 50% benign and 50% malignant cases. The hold-out test dataset was separated from the training/validation set prior to the image augmentation, so there was no overlapping original images across the two groups.
 
 ![alt text](https://farm1.staticflickr.com/686/32631809276_9b69b5d9d9_b.jpg)
 
@@ -45,7 +45,7 @@ Finally, 18000 of them were randomly selected for training, 3000 of them were fo
 
 To achieve correct classification, the conventional method is often composed of three main steps: feature extraction, feature selection, and classification. Tese three steps need to be well-addressed separately and then integrated together. Extraction of discriminative features could potentially ease the latter steps of feature selection and classification. Nevertheless, the engineering of effective features is problem-oriented and highly depends on the quality of each intermediate result in the image processing, which often needs many passes of trial-and-error design and case-by-case user interventions [1].
 
-The recent advances of deep learning technology can potentially change the design paradigm of image classification. Deep learning can directly uncover features from the training data without the explicit elaboration on feature extraction and selection. With the help of back propagation, the internal structures of neural networks get updated automatically based on the error information obtained from each iteration.
+The recent advances in deep learning technology can potentially change the design paradigm of image classification. Nature recently reported a work on classification of skin cancer using deep convolutional neural networks, which demonstrated a level of competence comparable to dermatologists [2]. Deep learning can directly uncover features from the training data without the explicit elaboration on feature extraction and selection. With the help of back propagation, the internal weights of neural networks get updated automatically based on the error information obtained from each iteration.
 
 In this project, I investigated and compared the performances of two different deep learning architectures, namely fully connected neural network and convolutional neural network. Both models were implemented using python and TensorFlow on a Nvidia Tesla K80 GPU hosted by Amazon Web Services (AWS) EC2 p2.xlarge instance.
 
@@ -74,7 +74,7 @@ After running both models five times, the average prediction accuracy on the hol
 - Fully connected neural network: 0.67
 - Convolutional neural network: 0.71
 
-The convolutional neural network out outperformed the fully connected neural network by four percent. The advantages of using convolutional neural network can also be observed from the following figures. As the number of training iteration increased, the validation accuracy of the convolutional neural network quickly and smoothly ramped up to 0.9 after 2000 iterations, while the fully connected neural network did not reach 0.9 until around 4500 iterations. On the other hand, starting from 1000 iterations, the loss value of the convolutional neural network was always lower than the fully connected neural network, which indicated that the gradient descent function inside the convolutional neural network had a better performance in converging to the local minimum point.
+The convolutional neural network outperformed the fully connected neural network by four percent. The advantages of using convolutional neural network can also be observed from the following figures. As the number of training iteration increased, the validation accuracy of the convolutional neural network quickly and smoothly ramped up to 0.9 after 2000 iterations, while the fully connected neural network did not reach 0.9 until around 4500 iterations. On the other hand, starting from 1000 iterations, the loss value of the convolutional neural network was always lower than that of the fully connected neural network, which indicated that the gradient descent function inside the convolutional neural network had a better performance in converging to the local minimum point.
 
 ![alt text](https://farm1.staticflickr.com/419/32636736206_530ea9f1c9_b.jpg)
 
@@ -89,3 +89,4 @@ Lastly, I want to thank all the people at Insight and the fellow fellows for giv
 
 Reference: 
 [1] Cheng, Jie-Zhi, et al. "Computer-Aided diagnosis with deep learning architecture: applications to breast lesions in us images and pulmonary nodules in CT scans." Scientific reports 6 (2016).
+[2] Esteva, Andre, et al. "Dermatologist-level classification of skin cancer with deep neural networks." Nature (2017).
