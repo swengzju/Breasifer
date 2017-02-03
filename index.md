@@ -88,6 +88,7 @@ Lastly, I want to thank all the people at Insight and the fellow fellows for giv
 
 
 Reference: 
+
 [1] Cheng, Jie-Zhi, et al. "Computer-Aided diagnosis with deep learning architecture: applications to breast lesions in us images and pulmonary nodules in CT scans." Scientific reports 6 (2016).
 
 [2] Esteva, Andre, et al. "Dermatologist-level classification of skin cancer with deep neural networks." Nature (2017).
