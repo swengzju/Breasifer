@@ -2,7 +2,7 @@
 
 Breast cancer is the second leading cause of cancer related deaths in women. It has been reported that one in eight women in the U.S. will be diagnosed with invasive breast cancer in their lifetime. In 2017, about 255,180 new cases of invasive breast cancer are expected to be diagnosed and 40,610 women in the U.S. are expected to die from breast cancer.
 
-![alt text](https://farm1.staticflickr.com/579/32671533255_a112f9d7cb_b.jpg)
+![alt text](https://farm1.staticflickr.com/754/32555142611_c4f9e68617_b.jpg)
 
 Traditionally, once-a-year screening is recommended to check a woman’s breasts health before there are signs or symptoms of the disease, especially for those who are over 50 years old. The screening normally involves X-ray mammograms followed by ultrasound imaging. However, the diagnosis on breast ultrasound is a subjective procedure and highly dependent on the experience of the surgeons. 
 
@@ -53,11 +53,11 @@ In this project, I investigated and compared the performances of two different d
 
 In fully connected neural network, each neuron is connected to all the neurons in the previous layer, and each connection has its own weight. However, the information of the weights are not shared by neurons. Before implementing fully connected neural network, there was an extra step of converting each 2D image into a 1D array with a size of 1600. After that, the input layer became a 18000 x 1600 matrix.
 
-![alt text](https://farm1.staticflickr.com/319/31831201844_e63578572f_b.jpg)
+![alt text](https://farm1.staticflickr.com/316/32524396912_201bc8b86a_b.jpg)
 
 The constructed fully connected neural network has one input layer, three hidden layers that have 512, 256, 128 nodes respectively, and one output layer that has two outputs. The batch size is 128. The detailed diagram is shown below.
 
-![alt text](https://farm1.staticflickr.com/719/32521161552_0d397712a0_b.jpg)
+![alt text](https://farm1.staticflickr.com/640/32677125585_0705d01f49_b.jpg)
 
 #### Convolutional neural network
 
