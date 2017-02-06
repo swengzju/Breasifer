@@ -37,7 +37,7 @@ Based on the observation that the most interesting part (lesion and its surround
 
 ![alt text](https://farm1.staticflickr.com/460/31831625064_552f5abfd0_b.jpg)
 
-Finally, 18000 of them were randomly selected for training, 3000 of them were for validation, and the other 3000 were for testing. Training, validation, and test set all consisted of 50% benign and 50% malignant cases. The hold-out test dataset was separated from the training/validation set prior to the image augmentation, so there was no overlapping original images across the two groups.
+Finally, 18000 of them were randomly selected for training, 3000 of them were for validation, and the other 3000 were for testing. Training, validation, and test set all consisted of 50% benign and 50% malignant cases. The holdout test dataset was separated from the training/validation set prior to the image augmentation, so there was no overlapping original images across the two groups.
 
 ![alt text](https://farm1.staticflickr.com/686/32631809276_9b69b5d9d9_b.jpg)
 
@@ -45,7 +45,9 @@ Finally, 18000 of them were randomly selected for training, 3000 of them were fo
 
 To achieve correct classification, the conventional method is often composed of three main steps: feature extraction, feature selection, and classification. Tese three steps need to be well-addressed separately and then integrated together. Extraction of discriminative features could potentially ease the latter steps of feature selection and classification. Nevertheless, the engineering of effective features is problem-oriented and highly depends on the quality of each intermediate result in the image processing, which often needs many passes of trial-and-error design and case-by-case user interventions [1].
 
-The recent advances in deep learning technology can potentially change the design paradigm of image classification. Nature recently reported a work on classification of skin cancer using deep convolutional neural networks, which demonstrated a level of competence comparable to dermatologists [2]. Deep learning can directly uncover features from the training data without the explicit elaboration on feature extraction and selection. With the help of back propagation, the internal weights of neural networks get updated automatically based on the error information obtained from each iteration.
+The recent advances in deep learning technology can potentially change the design paradigm of image classification. Nature recently reported a work on classification of skin cancer using deep convolutional neural networks, which demonstrated a level of competence comparable to dermatologists [2]. When we speak of "deep" learning, we are not simply referrring to the number of layers. While there is no concrete definition of what "deep" means, it is the number of possible causal connections each neuron has that really shapes the "depth" of deep learning structures.
+
+Deep learning can directly uncover features from the training data without the explicit elaboration on feature extraction and selection. Neural networks operate by passing the input information through layers of neurons that transform the input information into the output. With the help of back propagation, the internal weights of neural networks get updated automatically based on the error information obtained from each iteration.
 
 In this project, I investigated and compared the performances of two different deep learning architectures, namely fully connected neural network and convolutional neural network. Both models were implemented using python and TensorFlow on a Nvidia Tesla K80 GPU hosted by Amazon Web Services (AWS) EC2 p2.xlarge instance.
 
@@ -61,20 +63,20 @@ The constructed fully connected neural network has one input layer, three hidden
 
 #### Convolutional neural network
 
-In convolutional neural network, each neuron is only connected with a few local neurons in the previous layer, and the weight is shared for every neuron in that layer. Convolutional neural network is effective for image classification problems because the convolution operation produces information on spacially correlated features of the image. For example, convolution may result in edges becoming more prominent.
+In convolutional neural network, each neuron is only connected with a few local neurons in the previous layer, and the weight is shared for every neuron in that layer. Convolutional neural network is effective for image classification problems because the convolution operation produces information on spatially correlated features of the image. For example, convolution may result in edges becoming more prominent.
 
-The constructed convolutional neural network has two convolutional layers, each of them has 64 5x5 filters. By feeding the output of one convolutional layer to another, higher-order features can be extracted. After convolution, these features can be more readily learned by a fully connected neural network. Following the convolutional layers, there are three fully connected layers with 512, 256, 128 nodes respectively. The batch size is 512. The detailed diagram is shown below.
+The constructed convolutional neural network has two convolutional layers, each of them has 64 5x5 filters. By feeding the output of one convolutional layer to another, higher-order features can be extracted. After convolution, these features can be more readily learned by a fully connected neural network. The convolutional layers can be thought of as preparing the data so that the fully connected layers can take advangtage of the spatial structure of the input image. The intuition is that after the image has been passed through multiple convolutional layers, the neurons will have been encoded with all the relavant spatial features. Following the convolutional layers, there are three fully connected layers with 512, 256, 128 nodes respectively. The batch size is 512. The detailed diagram is shown below.
 
 ![alt text](https://farm1.staticflickr.com/335/32633875536_fc28e75933_b.jpg)
 
 ## Model evaluation
 
-After running both models five times, the average prediction accuracy on the hold-out test dataset was:
+After running both models five times, the average prediction accuracy on the holdout test dataset was:
 
 - Fully connected neural network: 0.67
 - Convolutional neural network: 0.71
 
-The convolutional neural network outperformed the fully connected neural network by four percent. The advantages of using convolutional neural network can also be observed from the following figures. As the number of training iteration increased, the validation accuracy of the convolutional neural network quickly and smoothly ramped up to 0.9 after 2000 iterations, while the fully connected neural network did not reach 0.9 until around 4500 iterations. On the other hand, starting from 1000 iterations, the loss value of the convolutional neural network was always lower than that of the fully connected neural network, which indicated that the gradient descent function inside the convolutional neural network had a better performance in converging to the local minimum point.
+The convolutional neural network outperformed the fully connected neural network by four percent. The advantages of using convolutional neural network can also be observed from the following figures. As the number of training iteration increased, the validation accuracy of the convolutional neural network quickly and smoothly ramped up to 0.9 after 2000 iterations, while the fully connected neural network did not reach 0.9 until around 4500 iterations. On the other hand, starting from 1000 iterations, the loss value of the convolutional neural network was always lower than that of the fully connected neural network, which indicated that the gradient descent function inside the convolutional neural network had a better performance in converging to the local minimum point. The loss value is calculated by a cost function, which essentially defines how far the model is from the desired output. The gradient descent is attempting to converge on a result that minimizes the cost function by slowing changing the weights.
 
 ![alt text](https://farm1.staticflickr.com/419/32636736206_530ea9f1c9_b.jpg)
 
