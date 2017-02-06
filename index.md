@@ -89,6 +89,8 @@ The convolutional neural network has many hyperparameters that can be tuned, inc
 Lastly, I want to thank all the people at Insight and the fellow fellows for giving me tremendous help in this project. I also want to thank iSono Health and CTO Dr. Shadi Saberi for giving me the opportunity to work on this interesting and challenging problem. I really learned a lot during my journey at Insight.
 
 
+
+
 Reference: 
 
 [1] Cheng, Jie-Zhi, et al. "Computer-Aided diagnosis with deep learning architecture: applications to breast lesions in us images and pulmonary nodules in CT scans." Scientific reports 6 (2016).
