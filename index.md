@@ -71,14 +71,20 @@ The constructed convolutional neural network has two convolutional layers, each 
 
 ## Model evaluation
 
-After running both models five times, the average prediction accuracy on the holdout test dataset was:
+The prediction accuracy on the holdout test dataset was:
 
 - Fully connected neural network: 0.67
 - Convolutional neural network: 0.71
 
+The convolutional neural network outperformed the fully connected neural network by four percent in terms of prediction accuracy. Based on the confusion matrix below, the convolutional neural network model achieved:
+
+- Sensitivity: 0.73
+- Specificity: 0.69
+- F1 score: 0.72
+
 ![alt text](https://farm1.staticflickr.com/291/32724769276_0c2b77d0e7_m.jpg)
 
-The convolutional neural network outperformed the fully connected neural network by four percent. The advantages of using convolutional neural network can also be observed from the following figures. As the number of training iteration increased, the validation accuracy of the convolutional neural network quickly and smoothly ramped up to 0.9 after 2000 iterations, while the fully connected neural network did not reach 0.9 until around 4500 iterations. On the other hand, starting from 1000 iterations, the loss value of the convolutional neural network was always lower than that of the fully connected neural network, which indicated that the gradient descent function inside the convolutional neural network had a better performance in converging to the local minimum point. The loss value is calculated by a cost function, which essentially defines how far the model is from the desired output. The gradient descent is attempting to converge on a result that minimizes the cost function by slowing changing the weights.
+The advantages of using convolutional neural network can also be observed from the following two figures. As the number of training iteration increased, the validation accuracy of the convolutional neural network quickly and smoothly ramped up to 0.9 after 2000 iterations, while the fully connected neural network did not reach 0.9 until around 4500 iterations. On the other hand, starting from 1000 iterations, the loss value of the convolutional neural network was always lower than that of the fully connected neural network, which indicated that the gradient descent function inside the convolutional neural network had a better performance in converging to the local minimum point. The loss value is calculated by a cost function, which essentially defines how far the model is from the desired output. The gradient descent is attempting to converge on a result that minimizes the cost function by slowing changing the weights.
 
 ![alt text](https://farm1.staticflickr.com/419/32636736206_530ea9f1c9_b.jpg)
 
@@ -86,11 +92,11 @@ To speed up the training procedure, stochastic gradient descent (SGD) and rectif
 
 ## Final remarks
 
-The convolutional neural network has many hyperparameters that can be tuned, including but not limited to: number of convolutional layers, number of fully connected layers, number of filters, size of filters, number of hidden nodes, batch size, learning rate, max pooling size, dropout ratio, etc. Therefore, the performance of the model could be potentially further improved by fine tuning. 
+The convolutional neural network has many hyperparameters that can be tuned, including but not limited to: number of convolutional layers, number of fully connected layers, number of filters, size of filters, number of hidden nodes, batch size, learning rate, max pooling size, dropout ratio, etc. Therefore, the performance of the model could be potentially further improved by fine tuning. Alternatively, sophisticated models along with sufficient number of data can potentially improve the model performance.
 
 Lastly, I want to thank all the people at Insight and the fellow fellows for giving me tremendous help in this project. I also want to thank iSono Health and CTO Dr. Shadi Saberi for giving me the opportunity to work on this interesting and challenging problem. I really learned a lot during my journey at Insight.
 
-
+<iframe src="https://docs.google.com/presentation/d/1XtiPld3UoD4ynqO4Cv2Jg21637gvzf3G0sQgVUhsGR8/embed?start=false&loop=true&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 
 Reference: 
