@@ -55,11 +55,11 @@ In this project, I investigated and compared the performances of two different d
 
 In fully connected neural network, each neuron is connected to all the neurons in the previous layer, and each connection has its own weight. However, the information of the weights are not shared by the neurons. Before implementing fully connected neural network, there was an extra step of converting each 2D image into a 1D array with a size of 1600. After that, the input layer became a 18000 x 1600 matrix.
 
-![alt text](https://farm1.staticflickr.com/319/31831201844_e63578572f_b.jpg)
+![alt text](https://farm1.staticflickr.com/521/32724769326_df42e1a299_b.jpg)
 
 The constructed fully connected neural network has one input layer, three hidden layers that have 512, 256, 128 nodes respectively, and one output layer that has two outputs. The batch size is 128. The detailed diagram is shown below.
 
-![alt text](https://farm1.staticflickr.com/719/32521161552_0d397712a0_b.jpg)
+![alt text](https://farm1.staticflickr.com/735/32642251811_d078b56364_b.jpg)
 
 #### Convolutional neural network
 
@@ -67,7 +67,7 @@ In convolutional neural network, each neuron is only connected with a few local 
 
 The constructed convolutional neural network has two convolutional layers, each of them has 64 5x5 filters. By feeding the output of one convolutional layer to another, higher-order features can be extracted. After convolution, these features can be more readily learned by a fully connected neural network. The convolutional layers can be thought of as preparing the data so that the fully connected layers can take advangtage of the spatial structure of the input image. The intuition is that after the image has been passed through multiple convolutional layers, the neurons will have been encoded with all the relavant spatial features. Following the convolutional layers, there are three fully connected layers with 512, 256, 128 nodes respectively. The batch size is 512. The detailed diagram is shown below.
 
-![alt text](https://farm1.staticflickr.com/335/32633875536_fc28e75933_b.jpg)
+![alt text](https://farm1.staticflickr.com/501/32385723780_efbf0d871a_b.jpg)
 
 ## Model evaluation
 
@@ -75,6 +75,8 @@ After running both models five times, the average prediction accuracy on the hol
 
 - Fully connected neural network: 0.67
 - Convolutional neural network: 0.71
+
+![alt text](https://farm1.staticflickr.com/291/32724769276_0c2b77d0e7_m.jpg)
 
 The convolutional neural network outperformed the fully connected neural network by four percent. The advantages of using convolutional neural network can also be observed from the following figures. As the number of training iteration increased, the validation accuracy of the convolutional neural network quickly and smoothly ramped up to 0.9 after 2000 iterations, while the fully connected neural network did not reach 0.9 until around 4500 iterations. On the other hand, starting from 1000 iterations, the loss value of the convolutional neural network was always lower than that of the fully connected neural network, which indicated that the gradient descent function inside the convolutional neural network had a better performance in converging to the local minimum point. The loss value is calculated by a cost function, which essentially defines how far the model is from the desired output. The gradient descent is attempting to converge on a result that minimizes the cost function by slowing changing the weights.
 
