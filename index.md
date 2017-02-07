@@ -96,9 +96,9 @@ The convolutional neural network has many hyperparameters that can be tuned, inc
 
 Lastly, I want to thank all the people at Insight and the fellow fellows for giving me tremendous help in this project. I also want to thank iSono Health and CTO Dr. Shadi Saberi for giving me the opportunity to work on this interesting and challenging problem. I really learned a lot during my journey at Insight.
 
-<br />
+<dl>
 <iframe src="https://docs.google.com/presentation/d/1XtiPld3UoD4ynqO4Cv2Jg21637gvzf3G0sQgVUhsGR8/embed?start=false&loop=true&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-<br />
+</dl>
 
 Reference: 
 
