@@ -1,4 +1,4 @@
-# Differentiate benign and malignant breast ultrasound using deep learning
+# Differentiate Benign and Malignant Breast Ultrasound Using Deep Learning
 
 ## Background
 
@@ -8,7 +8,7 @@ Breast cancer is the second leading cause of cancer related deaths in women. It 
 
 Traditionally, once-a-year screening is recommended to check a woman’s breasts health before there are signs or symptoms of the disease, especially for those who are over 50 years old. The screening normally involves X-ray mammograms followed by ultrasound imaging. However, the diagnosis on breast ultrasound is a subjective procedure and highly dependent on the experience of the surgeons. 
 
-[iSono Health](http://www.isonohealth.com/) is a startup company committed to developing an affordable, automated ultrasound imaging platform to facilitate monthly self-monitoring for women to help with early breast cancer detection. The device is bundled with iSono app that can analyze the results and tag any changes in the back end in real time (see the picture below). During the time at Insight Health Data Fellow program, I was working with iSono Health focusing on building a deep learning model to differentiate benign and malignant breast lesions based on the ultrasound images.
+[iSono Health](http://www.isonohealth.com/) is a startup company committed to developing an affordable, automated ultrasound imaging platform to facilitate monthly self-monitoring for women to help with early breast cancer detection. The device is bundled with iSono app that can analyze the results and tag any changes in the back end in real time (details shown in the picture below). During the time at Insight Health Data Fellow program, I was working with iSono Health focusing on building a deep learning model to differentiate benign and malignant breast lesions based on the ultrasound images.
 
 ![alt text](https://farm1.staticflickr.com/778/32518628362_5e8e668c23_b.jpg)
 
@@ -23,7 +23,7 @@ The raw dataset (courtesy of iSono Health) contains 2,091 labeled 2-D breast ult
 - Subtypes in malignant: 13
 - Subtypes in unusual: 3
 
-Over 99% of the images have the size of 300 x 225 pixels, each pixel has a value ranging from 0 to 255. There are 12 subtypes in the benign cases and 13 subtypes in the malignant cases. The images were obtained from different sources, so they have various field of views, resolutions, scales, etc. Below shows some benign and malignant breast lesions with different subtypes.
+Over 99% of the images have the size of 300 x 225 pixels, each pixel has a value ranging from 0 to 255. There are 12 subtypes in the benign cases and 13 subtypes in the malignant cases. The images were obtained from different sources, so they have various field of views, resolutions, scales, etc. The picture below shows some benign and malignant breast lesions with different subtypes.
 
 ![alt text](https://farm1.staticflickr.com/290/32292792970_224a161014_b.jpg)
 
@@ -78,7 +78,7 @@ The prediction accuracy on the holdout test dataset was:
 - Fully connected neural network: 0.67
 - Convolutional neural network: 0.71
 
-The convolutional neural network outperformed the fully connected neural network by four percent in terms of prediction accuracy. Based on the confusion matrix below, the convolutional neural network model achieved:
+The convolutional neural network outperformed the fully connected neural network by four percent in terms of prediction accuracy. Based on the confusion matrix as shown below, the convolutional neural network model achieved:
 
 - Sensitivity: 0.73
 - Specificity: 0.69
