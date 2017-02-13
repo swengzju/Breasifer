@@ -4,7 +4,7 @@ In this project, I collaborated with iSono Health to build a deep learning model
 
 Please check the blog post for more details.
 
-Some other sources that I found useful:
+Some sources that I found useful:
 
 http://www.pyimagesearch.com/category/deep-learning-2/
 
