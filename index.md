@@ -87,7 +87,7 @@ The code will be the deliverable to iSono Health as a starting point of the clas
 
 The convolutional neural network has many hyperparameters that can be tuned, including but not limited to: number of convolutional layers, number of fully connected layers, number of filters, size of filters, number of hidden nodes, batch size, learning rate, max pooling size, dropout ratio, etc. Therefore, the performance of the model could be potentially further improved by fine tuning. Alternatively, sophisticated models along with sufficient number of data can potentially improve the model performance, but they require more computational capacity.
 
-Lastly, I want to thank all the people at Insight and the fellow fellows for giving me tremendous help in this project. I also want to thank iSono Health and CTO Dr. Shadi Saberi for giving me the opportunity to work on this interesting and challenging problem. I really learned a lot during my journey at Insight.
+Lastly, I want to thank all the people at Insight, the fellow fellows, and Insight alumni for giving me tremendous help in this project. I also want to thank iSono Health and CTO Dr. Shadi Saberi for giving me the opportunity to work on this interesting and challenging problem. I really learned a lot during my journey at Insight.
 
 [My presentation on this project](https://docs.google.com/presentation/d/1XtiPld3UoD4ynqO4Cv2Jg21637gvzf3G0sQgVUhsGR8/pub?start=false&loop=false&delayms=3000) 
 
