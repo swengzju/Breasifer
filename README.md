@@ -4,11 +4,20 @@ In this project, I collaborated with iSono Health to build a deep learning model
 
 Please check the blog post for more details.
 
+Please look at the files with the following order:
+
+- Image preprocessing and augmentation.ipynb
+- Data pickling.ipynb
+- Fully connected neural network.ipynb (optional)
+- Convolutional neural network.ipynb
+
 ----------------------------
 
 The model was implemented using python and TensorFlow on a Nvidia Tesla K80 GPU hosted by Amazon Web Services (AWS) EC2 p2.xlarge instance.
 
 To set up the working environment, you may take a look at these helpful tutorials:
+
+http://course.fast.ai/lessons/aws.html
 
 https://alliseesolutions.wordpress.com/2016/09/08/install-gpu-tensorflow-from-sources-w-ubuntu-16-04-and-cuda-8-0-rc/
 
@@ -22,9 +31,10 @@ https://www.continuum.io/downloads
 
 http://jupyter.org/
 
-Please look at the files with the following order:
+Some other sources that I found useful:
 
-- Image preprocessing and augmentation.ipynb
-- Data pickling.ipynb
-- Fully connected neural network.ipynb (optional)
-- Convolutional neural network.ipynb
+http://www.pyimagesearch.com/category/deep-learning-2/
+
+http://www.deeplearningbook.org/
+
+https://www.udacity.com/ (Deep Learning course)
