@@ -103,4 +103,4 @@ Reference:
 
 About Sheng:
 
-Sheng Weng is finishing his Ph.D. in applied physics from Rice University. His research is focused translational biophotonics imaging and microscopy using ultrafast lasers. You can reach him through [LinkedIn](https://www.linkedin.com/in/shengweng).
+Sheng Weng is finishing his Ph.D. in applied physics from Rice University. His research is focused on translational biophotonics imaging and microscopy using ultrafast lasers. You can reach him out through [LinkedIn](https://www.linkedin.com/in/shengweng).
