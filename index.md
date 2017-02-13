@@ -83,7 +83,7 @@ Stochastic gradient descent (SGD) and rectified linear unit (ReLu) were applied 
 
 ## Final remarks
 
-The code will be the deliverable to iSono Health as a starting point of the classification algorithm. You can find them in my repository: https://github.com/swengzju/myblog.
+The code will be the deliverable to iSono Health as a starting point of the classification algorithm. You can find them in my [repository](https://github.com/swengzju/myblog).
 
 The convolutional neural network has many hyperparameters that can be tuned, including but not limited to: number of convolutional layers, number of fully connected layers, number of filters, size of filters, number of hidden nodes, batch size, learning rate, max pooling size, dropout ratio, etc. Therefore, the performance of the model could be potentially further improved by fine tuning. Alternatively, sophisticated models along with sufficient number of data can potentially improve the model performance, but they require more computational capacity.
 
@@ -103,4 +103,4 @@ Reference:
 
 About Sheng:
 
-Sheng Weng is finishing his Ph.D. in applied physics from Rice University. His research is focused translational biophotonics imaging and microscopy using ultrafast lasers. You can reach him through LinkedIn: https://www.linkedin.com/in/shengweng
+Sheng Weng is finishing his Ph.D. in applied physics from Rice University. His research is focused translational biophotonics imaging and microscopy using ultrafast lasers. You can reach him through [LinkedIn](https://www.linkedin.com/in/shengweng).
