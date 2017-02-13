@@ -37,7 +37,7 @@ It is worth mentioning that 1920 images as a whole is still a relative small dat
 
 Based on the observation that the most interesting part (lesion and its surroundings) of almost all the images is located around the center of the image, I cropped all the images so that their dimensions were reduced to 200 x 200 pixels. I then downsampled them 5x to 40 x 40 pixels, in order to keep the input size of the network manageable. The flow chart of data preparation is shown below.
 
-![alt text](https://farm1.staticflickr.com/353/32056769623_19591d1d5d_b.jpg)
+![alt text](https://farm4.staticflickr.com/3868/32028580284_3c05d003db_b.jpg)
 
 Finally, 18000 of them were randomly selected for training, 3000 of them were for validation, and the other 3000 were for testing. Training, validation, and test set all consisted of 50% benign and 50% malignant cases. The holdout test dataset was separated from the training/validation set prior to the image augmentation, so there was no overlapping original images across the two groups.
 
