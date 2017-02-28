@@ -10,4 +10,8 @@ http://www.pyimagesearch.com/category/deep-learning-2/
 
 http://www.deeplearningbook.org/
 
+http://course.fast.ai/
+
+http://benanne.github.io/2014/04/05/galaxy-zoo.html
+
 https://www.udacity.com/ (Deep Learning course)
