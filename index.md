@@ -71,7 +71,7 @@ The constructed convolutional neural network has three convolutional layers, eac
 
 ## Model evaluation
 
-The convolutional neural network outperformed the fully connected neural network in all the evaluation metrics as shown below. Notice that convolutional neural network achieved 0.76 specificity, which was more favored for radiologists.
+The convolutional neural network outperformed the fully connected neural network in all the evaluation metrics as shown below. The prediction accuracy of CNN is 73% while it's only 66% for FCNN.
 
 ![alt text](https://farm3.staticflickr.com/2305/32028535434_c331f3494c_b.jpg)
 
