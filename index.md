@@ -71,7 +71,7 @@ The constructed convolutional neural network has three convolutional layers, eac
 
 ## Model evaluation
 
-The convolutional neural network outperformed the fully connected neural network in all the evaluation metrics as shown below. The prediction accuracy of CNN is 73% while it's only 66% for FCNN. In the below confusion matrix below, the threshold used for classifying bening and malignant cases was the default 0.5. Lowering the threshold value can give higher sensitivity and reduce the false negative cases. If the threshold becomes 0.3, the sensitivity of CNN would reach 74%.
+The convolutional neural network outperformed the fully connected neural network in all the evaluation metrics as shown below. The prediction accuracy of CNN is 73% while it's only 66% for FCNN. In the confusion matrix below, the threshold used for classifying bening and malignant cases was the default 0.5. Lowering the threshold value can give higher sensitivity and reduce the false negative cases. If the threshold becomes 0.3, the sensitivity of CNN would reach 74%.
 
 ![alt text](https://farm3.staticflickr.com/2305/32028535434_c331f3494c_b.jpg)
 
